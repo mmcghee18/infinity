@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <FullPageContainer>
       <h1>Counting Infinity</h1>
-      <h2>Why some infinities are bigger than other infinities</h2>
+      <h2>Why some infinities are bigger than other infinities...</h2>
       <AnimatingInfinity />
     </FullPageContainer>
   );
