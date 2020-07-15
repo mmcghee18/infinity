@@ -1,14 +1,18 @@
 import React from "react";
+import Header from "./article-components/Header.jsx";
+import useKeyPress from "./hooks/useKeyPress.js";
 
 function App() {
+  // const leftPress = useKeyPress("ArrowLeft");
+  // const rightPress = useKeyPress("ArrowRight");
+
   return (
     <div className="App">
-      <p>
-        Welcome to my starter project!{" "}
-        <span role="img" aria-label="heart and seedling">
-          ❤️ 🌱
-        </span>
-      </p>
+      {/* <div>
+        {leftPress && "😊"}
+        {rightPress && "😢"}
+      </div> */}
+      <Header />
     </div>
   );
 }

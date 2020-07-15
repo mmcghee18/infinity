@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   body {
@@ -6,4 +6,12 @@ export const GlobalStyle = createGlobalStyle`
     background-color: white;
     color: black;
   }
+`;
+
+export const FullPageContainer = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
 `;
