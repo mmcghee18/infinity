@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FullPageContainer, KeyboardKey } from "../styles/styles.js";
 import { useSpring, animated } from "react-spring";
-import { RightArrow } from "@styled-icons/boxicons-regular";
+import useKeyPress from "../hooks/useKeyPress.js";
 
 const AnimatingInfinity = () => {
   const props = useSpring({
@@ -50,43 +50,56 @@ const NumberLines = () => {
   );
 };
 
-const Header = () => {
-  const [madeGuess, setMadeGuess] = useState(false);
+const Header = ({ currentPage, setCurrentPage }) => {
+  const leftPress = useKeyPress("ArrowLeft");
+  const rightPress = useKeyPress("ArrowRight");
+
+  useEffect(() => {
+    if (rightPress) setCurrentPage(currentPage + 1);
+  }, [leftPress, rightPress]);
 
   return (
     <FullPageContainer>
-      <h1>Counting Infinity</h1>
-      <h2>Why some infinities are bigger than other infinities</h2>
-      <AnimatingInfinity />
-      <p>
-        Which group is bigger: all the numbers between 0 and 1 or all the
-        numbers between 0 and 2? Give it your best guess.
-      </p>
-      <NumberLines />
-      <button onClick={() => setMadeGuess(true)}>same size</button>
-      <button onClick={() => setMadeGuess(true)}>
-        numbers between 0 and 1
-      </button>
-      <button onClick={() => setMadeGuess(true)}>
-        numbers between 0 and 2
-      </button>
+      <div>
+        <h1>Counting Infinity</h1>
+        {/* <p>
+          A paradox is a statement that's either self-contradictory or goes
+          against what we intuitively expect.
+        </p>
+        <p>
+          A paradox is something that either seems true, but isn't OR seems
+          crazy but is true.
+        </p> */}
 
-      {madeGuess && (
-        <div style={{ marginTop: "25px" }}>
-          <p>
-            With a little math and some fun pictures, we can find out the
-            answer. (Don't worry, no fancy background knowledge is needed - if
-            you know how to count, you'll be good!)
+        {/* <p>
+          Like if I told you that my barber only shaves people who don’t shave
+          themselves. Seems fine. But does he shave himself? Huh. If he shaves
+          himself, that's a problem, because he would be shaving someone who
+          shaves themself. But if he doesn't, he's someone who the barber
+          shaves, so he must shave himself. Confused? Same.
+        </p> */}
+        <p>
+          Infinity. It's not a number, but rather the idea of something that is
+          boundless, endless, larger than any number. Like the number of digits
+          of pi. Or the number of breadsticks you can order at Olive Garden (not
+          really).
+        </p>
+        <p>
+          We’re going to ask the question “are some infinities bigger than other
+          infinities?” Turns out, the answer, like any good{" "}
+          <a href="#">paradox</a>, is <strong>mind-bendingly absurd</strong> but
+          also (somehow) <strong>beautifully well-founded</strong>. (No fancy
+          math knowledge required - if you know how to count, you're ready to
+          go!)
+        </p>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <p style={{ marginRight: "20px" }}>
+            Let's dive in! You can use the arrow keys to advance the story.
           </p>
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <p style={{ marginRight: "20px" }}>
-              Use the arrow keys to advance the story.
-            </p>
-            <KeyboardKey>{"<"}</KeyboardKey>
-            <KeyboardKey>{">"}</KeyboardKey>
-          </div>
+          <KeyboardKey>{"<"}</KeyboardKey>
+          <KeyboardKey>{">"}</KeyboardKey>
         </div>
-      )}
+      </div>
     </FullPageContainer>
   );
 };

@@ -9,12 +9,13 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const FullPageContainer = styled.div`
-  height: 100vh;
+  height: 92vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-left: 50px;
   padding-right: 50px;
+  padding-top: 8vh;
 `;
 
 export const KeyboardKey = styled.span`
@@ -35,4 +36,32 @@ export const KeyboardKey = styled.span`
   &:last-child {
     background-color: cornflowerblue;
   }
+`;
+
+export const SetImage = styled.img`
+  width: 100%;
+  height: auto;
+`;
+
+export const CurlyBrace = styled.div`
+  font-size: 120px;
+  margin-left: ${(props) => (!props.open ? "20px" : null)};
+  margin-right: ${(props) => (props.open ? "20px" : null)};
+`;
+
+export const SetContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+`;
+
+export const Line = styled.div`
+  background: black;
+  height: 100px;
+  width: 5px;
+`;
+
+export const ExplainerText = styled.div`
+  margin-bottom: 50px;
+  height: 4em;
 `;
