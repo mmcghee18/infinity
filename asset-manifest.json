@@ -1,19 +1,27 @@
 {
   "files": {
-    "main.js": "/infinity/static/js/main.ab929e75.chunk.js",
-    "main.js.map": "/infinity/static/js/main.ab929e75.chunk.js.map",
-    "runtime-main.js": "/infinity/static/js/runtime-main.88d854bc.js",
-    "runtime-main.js.map": "/infinity/static/js/runtime-main.88d854bc.js.map",
-    "static/js/2.d9884c1e.chunk.js": "/infinity/static/js/2.d9884c1e.chunk.js",
-    "static/js/2.d9884c1e.chunk.js.map": "/infinity/static/js/2.d9884c1e.chunk.js.map",
+    "main.js": "/infinity/static/js/main.e0fce45e.chunk.js",
+    "main.js.map": "/infinity/static/js/main.e0fce45e.chunk.js.map",
+    "runtime-main.js": "/infinity/static/js/runtime-main.d9a80ca9.js",
+    "runtime-main.js.map": "/infinity/static/js/runtime-main.d9a80ca9.js.map",
+    "static/js/2.825963b1.chunk.js": "/infinity/static/js/2.825963b1.chunk.js",
+    "static/js/2.825963b1.chunk.js.map": "/infinity/static/js/2.825963b1.chunk.js.map",
     "index.html": "/infinity/index.html",
-    "precache-manifest.24f81b2d918ee3b079de8d04da04a779.js": "/infinity/precache-manifest.24f81b2d918ee3b079de8d04da04a779.js",
+    "precache-manifest.f2d86da379a0be721283c946882a489b.js": "/infinity/precache-manifest.f2d86da379a0be721283c946882a489b.js",
     "service-worker.js": "/infinity/service-worker.js",
-    "static/js/2.d9884c1e.chunk.js.LICENSE.txt": "/infinity/static/js/2.d9884c1e.chunk.js.LICENSE.txt"
+    "static/js/2.825963b1.chunk.js.LICENSE.txt": "/infinity/static/js/2.825963b1.chunk.js.LICENSE.txt",
+    "static/media/boba_green.png": "/infinity/static/media/boba_green.4609d4ff.png",
+    "static/media/boba_orange.png": "/infinity/static/media/boba_orange.fd5d31d0.png",
+    "static/media/boba_purple.png": "/infinity/static/media/boba_purple.c8e35f0c.png",
+    "static/media/boba_transparent.png": "/infinity/static/media/boba_transparent.f7423be0.png",
+    "static/media/boba_white.png": "/infinity/static/media/boba_white.490ce916.png",
+    "static/media/djesse1.jpg": "/infinity/static/media/djesse1.0ffbf3b0.jpg",
+    "static/media/djesse2.jpg": "/infinity/static/media/djesse2.e6d2aa7d.jpg",
+    "static/media/djesse3.jpg": "/infinity/static/media/djesse3.62c7a9a0.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.88d854bc.js",
-    "static/js/2.d9884c1e.chunk.js",
-    "static/js/main.ab929e75.chunk.js"
+    "static/js/runtime-main.d9a80ca9.js",
+    "static/js/2.825963b1.chunk.js",
+    "static/js/main.e0fce45e.chunk.js"
   ]
 }
