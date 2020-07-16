@@ -4,7 +4,7 @@ import Counting from "./article-components/Counting.jsx";
 import useKeyPress from "./hooks/useKeyPress.js";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(0);
   // const numPages = 2;
 
   // const leftPress = useKeyPress("ArrowLeft");
