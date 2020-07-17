@@ -3,8 +3,8 @@ import styled, { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
   body {
     font-family: Rubik, sans-serif;
-    background-color: white;
-    color: black;
+    background-color: #81a5c9;
+    color: #333333;
   }
 `;
 
@@ -84,4 +84,8 @@ export const LeftTouch = styled.div`
 export const RightTouch = styled.div`
   width: 65%;
   height: 100%;
+`;
+
+export const WhiteText = styled.span`
+  background: white;
 `;

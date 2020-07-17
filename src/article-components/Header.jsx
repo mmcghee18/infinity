@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { FullPageContainer, KeyboardKey } from "../styles/styles.js";
+import React from "react";
+import { FullPageContainer, WhiteText } from "../styles/styles.js";
 import { useSpring, animated } from "react-spring";
 import useKeyPress from "../hooks/useKeyPress.js";
 
@@ -71,8 +71,10 @@ const Header = ({ visible, currentStep, setCurrentStep }) => {
         </p>
         <div style={{ display: "flex", alignItems: "center" }}>
           <p style={{ marginRight: "20px" }}>
-            Let's dive in! Click anywhere on the right side of the screen to go
-            forward (left side to go backwards).
+            <WhiteText>
+              Let's dive in! Click anywhere on the right side of the screen to
+              go forward (left side to go backwards).
+            </WhiteText>
           </p>
         </div>
       </div>

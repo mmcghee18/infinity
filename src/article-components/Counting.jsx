@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import {
   FullPageContainer,
-  SetImage,
-  CurlyBrace,
-  SetContainer,
-  Line,
   ExplainerText,
+  WhiteText,
 } from "../styles/styles.js";
 import useKeyPress from "../hooks/useKeyPress.js";
 import SameSizeSet from "./Counting/SameSizeSet.jsx";
@@ -14,26 +11,36 @@ import _ from "lodash";
 
 const textSteps = [
   <p>
-    To start, let's talk about <strong>counting</strong> ✋🏽
+    <WhiteText>
+      To start, let's talk about <strong>counting</strong> ✋🏽
+    </WhiteText>
   </p>,
   <p>
-    When we say we have 5 bobas, it means we have one for every number from 1 to
-    5.
+    <WhiteText>
+      When we say we have 5 bobas, it means we have one for every number from 1
+      to 5.
+    </WhiteText>
   </p>,
   <p>
-    These are sets. They're just collections of distinct objects, they can
-    contain anything (numbers, boba drinks, Jacob Collier albums, other sets)!
+    <WhiteText>
+      These are sets. They're just collections of distinct objects, they can
+      contain anything (numbers, boba drinks, Jacob Collier albums, other sets)!
+    </WhiteText>
   </p>,
   <>
     <p>
-      We say 2 sets are the same size if you can draw a line between every
-      element without leaving any elements uncovered.
+      <WhiteText>
+        We say 2 sets are the same size if you can draw a line between every
+        element without leaving any elements uncovered.
+      </WhiteText>
     </p>
     <p>
-      <strong>These sets are the same size!</strong>
+      <WhiteText>
+        <strong>These sets are the same size!</strong>
+      </WhiteText>
     </p>
   </>,
-  <p>But these ones aren't. Someone's missing a buddy!</p>,
+  <WhiteText>But these ones aren't. Someone's missing a buddy!</WhiteText>,
 ];
 
 const Counting = ({ visible, startStep, currentStep, setCurrentStep }) => {

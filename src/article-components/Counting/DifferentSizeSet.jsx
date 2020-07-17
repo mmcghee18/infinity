@@ -7,14 +7,7 @@ import bobaWhite from "../../images/boba_white.png";
 import djesse1 from "../../images/djesse1.jpg";
 import djesse2 from "../../images/djesse2.jpg";
 import djesse3 from "../../images/djesse3.jpg";
-import {
-  FullPageContainer,
-  SetImage,
-  CurlyBrace,
-  SetContainer,
-  Line,
-  ExplainerText,
-} from "../../styles/styles.js";
+import { SetImage, CurlyBrace, SetContainer } from "../../styles/styles.js";
 
 const DifferentSizeSet = ({ currentStep }) => {
   const items1 = [bobaBrown, bobaGreen, bobaOrange, bobaPurple, bobaWhite];
