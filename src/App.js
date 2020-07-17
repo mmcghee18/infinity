@@ -4,7 +4,7 @@ import Counting from "./article-components/Counting.jsx";
 import Touch from "./Touch.jsx";
 
 function App() {
-  const [currentStep, setCurrentStep] = useState(4);
+  const [currentStep, setCurrentStep] = useState(0);
   console.log({ currentStep });
 
   return (

@@ -12,18 +12,24 @@ import {
   Line,
   ExplainerText,
 } from "../../styles/styles.js";
+import useChartDimensions from "../../hooks/useChartDimensions.js";
 import _ from "lodash";
 
 const SameSizeSet = ({ myStep }) => {
   const items = [bobaBrown, bobaGreen, bobaOrange, bobaPurple, bobaWhite];
 
+  const chartSettings = {};
+  const [ref, dms] = useChartDimensions(chartSettings);
+
+  const firstX = (dms.width - 120) / 5;
+
   return (
-    <div>
+    <div style={{ width: "100%" }}>
       {/* Set of boba */}
       <SetContainer>
         <CurlyBrace>{"{"}</CurlyBrace>
         {items.map((imageSrc, i) => (
-          <div key={i} style={{ width: "14vw" }}>
+          <div key={i} style={{ width: "18%" }}>
             <SetImage key={i} src={imageSrc} alt={`boba-${i}`} />
           </div>
         ))}
@@ -32,13 +38,29 @@ const SameSizeSet = ({ myStep }) => {
 
       {/* Counting lines */}
       {myStep > 0 && (
+        <div ref={ref} style={{ height: "200px", width: "100%" }}>
+          <svg height={dms.height} width={dms.width}>
+            <g>
+              <line
+                x1={firstX}
+                y1={0}
+                x2={firstX}
+                y2={200}
+                stroke="black"
+              ></line>
+            </g>
+          </svg>
+        </div>
+      )}
+
+      {/* {myStep > 0 && (
         <SetContainer>
           <CurlyBrace style={{ visibility: "hidden" }}>{"{"}</CurlyBrace>
           {_.range(1, 6).map((i) => (
             <div
               key={i}
               style={{
-                width: "14vw",
+                width: "18%",
                 display: "flex",
                 justifyContent: "center",
               }}
@@ -48,7 +70,7 @@ const SameSizeSet = ({ myStep }) => {
           ))}
           <CurlyBrace style={{ visibility: "hidden" }}>{"}"}</CurlyBrace>
         </SetContainer>
-      )}
+      )} */}
 
       {/* Set of numbers */}
       {myStep > 0 && (
@@ -57,7 +79,7 @@ const SameSizeSet = ({ myStep }) => {
           {_.range(1, 6).map((i) => (
             <div
               key={i}
-              style={{ width: "14vw", fontSize: "60px", textAlign: "center" }}
+              style={{ width: "18%", fontSize: "60px", textAlign: "center" }}
             >
               {i}
             </div>
