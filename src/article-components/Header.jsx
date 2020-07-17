@@ -50,34 +50,11 @@ const NumberLines = () => {
   );
 };
 
-const Header = ({ currentPage, setCurrentPage }) => {
-  const leftPress = useKeyPress("ArrowLeft");
-  const rightPress = useKeyPress("ArrowRight");
-
-  useEffect(() => {
-    if (rightPress) setCurrentPage(currentPage + 1);
-  }, [leftPress, rightPress]);
-
+const Header = ({ visible, currentStep, setCurrentStep }) => {
   return (
-    <FullPageContainer>
+    <FullPageContainer visible={visible}>
       <div>
         <h1>Counting Infinity</h1>
-        {/* <p>
-          A paradox is a statement that's either self-contradictory or goes
-          against what we intuitively expect.
-        </p>
-        <p>
-          A paradox is something that either seems true, but isn't OR seems
-          crazy but is true.
-        </p> */}
-
-        {/* <p>
-          Like if I told you that my barber only shaves people who don’t shave
-          themselves. Seems fine. But does he shave himself? Huh. If he shaves
-          himself, that's a problem, because he would be shaving someone who
-          shaves themself. But if he doesn't, he's someone who the barber
-          shaves, so he must shave himself. Confused? Same.
-        </p> */}
         <p>
           Infinity. It's not a number, but rather the idea of something that is
           boundless, endless, larger than any number. Like the number of digits
@@ -94,10 +71,9 @@ const Header = ({ currentPage, setCurrentPage }) => {
         </p>
         <div style={{ display: "flex", alignItems: "center" }}>
           <p style={{ marginRight: "20px" }}>
-            Let's dive in! You can use the arrow keys to advance the story.
+            Let's dive in! Click anywhere on the right side of the screen to go
+            forward (left side to go backwards).
           </p>
-          <KeyboardKey>{"<"}</KeyboardKey>
-          <KeyboardKey>{">"}</KeyboardKey>
         </div>
       </div>
     </FullPageContainer>

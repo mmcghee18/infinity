@@ -9,8 +9,8 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const FullPageContainer = styled.div`
+  display: ${(props) => (props.visible ? "flex" : "none")};
   height: 92vh;
-  display: flex;
   flex-direction: column;
   align-items: center;
   padding-left: 50px;
@@ -64,4 +64,24 @@ export const Line = styled.div`
 export const ExplainerText = styled.div`
   margin-bottom: 50px;
   height: 4em;
+`;
+
+export const TouchContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: all;
+  display: flex;
+`;
+
+export const LeftTouch = styled.div`
+  width: 35%;
+  height: 100%;
+`;
+
+export const RightTouch = styled.div`
+  width: 65%;
+  height: 100%;
 `;

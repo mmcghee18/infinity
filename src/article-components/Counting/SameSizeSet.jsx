@@ -14,7 +14,7 @@ import {
 } from "../../styles/styles.js";
 import _ from "lodash";
 
-const SameSizeSet = ({ currentStep }) => {
+const SameSizeSet = ({ myStep }) => {
   const items = [bobaBrown, bobaGreen, bobaOrange, bobaPurple, bobaWhite];
 
   return (
@@ -31,7 +31,7 @@ const SameSizeSet = ({ currentStep }) => {
       </SetContainer>
 
       {/* Counting lines */}
-      {currentStep > 0 && (
+      {myStep > 0 && (
         <SetContainer>
           <CurlyBrace style={{ visibility: "hidden" }}>{"{"}</CurlyBrace>
           {_.range(1, 6).map((i) => (
@@ -51,7 +51,7 @@ const SameSizeSet = ({ currentStep }) => {
       )}
 
       {/* Set of numbers */}
-      {currentStep > 0 && (
+      {myStep > 0 && (
         <SetContainer>
           <CurlyBrace>{"{"}</CurlyBrace>
           {_.range(1, 6).map((i) => (

@@ -36,30 +36,17 @@ const textSteps = [
   <p>But these ones aren't. Someone's missing a buddy!</p>,
 ];
 
-const Counting = ({ currentPage, setCurrentPage }) => {
-  const [currentStep, setCurrentStep] = useState(0);
-  const numSteps = textSteps.length;
-
-  const leftPress = useKeyPress("ArrowLeft");
-  const rightPress = useKeyPress("ArrowRight");
-
-  useEffect(() => {
-    if (leftPress) {
-      if (currentStep - 1 >= 0) setCurrentStep(currentStep - 1);
-      if (currentStep === 0) setCurrentPage(currentPage - 1);
-    }
-    if (rightPress) {
-      if (currentStep + 1 < numSteps) setCurrentStep(currentStep + 1);
-    }
-  }, [leftPress, rightPress]);
+const Counting = ({ visible, startStep, currentStep, setCurrentStep }) => {
+  const myStep = currentStep - startStep;
+  console.log({ myStep });
 
   return (
-    <FullPageContainer>
+    <FullPageContainer visible={visible}>
       <ExplainerText>
-        {textSteps.map((text, i) => currentStep === i && text)}
+        {textSteps.map((text, i) => myStep === i && text)}
       </ExplainerText>
-      {currentStep < 4 && <SameSizeSet currentStep={currentStep} />}
-      {currentStep >= 4 && <DifferentSizeSet currentStep={currentStep} />}
+      {myStep <= 3 && <SameSizeSet myStep={myStep} />}
+      {myStep > 3 && <DifferentSizeSet myStep={myStep} />}
     </FullPageContainer>
   );
 };

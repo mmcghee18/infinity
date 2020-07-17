@@ -1,32 +1,30 @@
 import React, { useState, useEffect } from "react";
 import Header from "./article-components/Header.jsx";
 import Counting from "./article-components/Counting.jsx";
-import useKeyPress from "./hooks/useKeyPress.js";
+import Touch from "./Touch.jsx";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState(0);
-  // const numPages = 2;
-
-  // const leftPress = useKeyPress("ArrowLeft");
-  // const rightPress = useKeyPress("ArrowRight");
-
-  // useEffect(() => {
-  //   if (leftPress) {
-  //     if (currentPage - 1 >= 0) setCurrentPage(currentPage - 1);
-  //   }
-  //   if (rightPress) {
-  //     if (currentPage + 1 < numPages) setCurrentPage(currentPage + 1);
-  //   }
-  // }, [leftPress, rightPress]);
+  const [currentStep, setCurrentStep] = useState(0);
+  console.log({ currentStep });
 
   return (
     <div className="App">
-      {currentPage === 0 && (
-        <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      )}
-      {currentPage === 1 && (
-        <Counting currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      )}
+      <Touch
+        totalSteps={6}
+        currentStep={currentStep}
+        setCurrentStep={setCurrentStep}
+      />
+      <Header
+        visible={currentStep === 0}
+        currentStep={currentStep}
+        setCurrentStep={setCurrentStep}
+      />
+      <Counting
+        visible={currentStep > 0}
+        startStep={1}
+        currentStep={currentStep}
+        setCurrentStep={setCurrentStep}
+      />
     </div>
   );
 }
