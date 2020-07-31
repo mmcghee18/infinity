@@ -1,27 +1,24 @@
 {
   "files": {
-    "main.js": "/infinity/static/js/main.a0807913.chunk.js",
-    "main.js.map": "/infinity/static/js/main.a0807913.chunk.js.map",
+    "main.js": "/infinity/static/js/main.6594d72e.chunk.js",
+    "main.js.map": "/infinity/static/js/main.6594d72e.chunk.js.map",
     "runtime-main.js": "/infinity/static/js/runtime-main.d9a80ca9.js",
     "runtime-main.js.map": "/infinity/static/js/runtime-main.d9a80ca9.js.map",
-    "static/js/2.7d31a533.chunk.js": "/infinity/static/js/2.7d31a533.chunk.js",
-    "static/js/2.7d31a533.chunk.js.map": "/infinity/static/js/2.7d31a533.chunk.js.map",
+    "static/js/2.08d04a99.chunk.js": "/infinity/static/js/2.08d04a99.chunk.js",
+    "static/js/2.08d04a99.chunk.js.map": "/infinity/static/js/2.08d04a99.chunk.js.map",
     "index.html": "/infinity/index.html",
-    "precache-manifest.5ea0750c83fe11152716c05140b896b3.js": "/infinity/precache-manifest.5ea0750c83fe11152716c05140b896b3.js",
+    "precache-manifest.8a90a788efa10e58dc53c5893aa82919.js": "/infinity/precache-manifest.8a90a788efa10e58dc53c5893aa82919.js",
     "service-worker.js": "/infinity/service-worker.js",
-    "static/js/2.7d31a533.chunk.js.LICENSE.txt": "/infinity/static/js/2.7d31a533.chunk.js.LICENSE.txt",
+    "static/js/2.08d04a99.chunk.js.LICENSE.txt": "/infinity/static/js/2.08d04a99.chunk.js.LICENSE.txt",
     "static/media/boba_green.png": "/infinity/static/media/boba_green.4609d4ff.png",
     "static/media/boba_orange.png": "/infinity/static/media/boba_orange.fd5d31d0.png",
     "static/media/boba_purple.png": "/infinity/static/media/boba_purple.c8e35f0c.png",
     "static/media/boba_transparent.png": "/infinity/static/media/boba_transparent.f7423be0.png",
-    "static/media/boba_white.png": "/infinity/static/media/boba_white.490ce916.png",
-    "static/media/djesse1.jpg": "/infinity/static/media/djesse1.0ffbf3b0.jpg",
-    "static/media/djesse2.jpg": "/infinity/static/media/djesse2.e6d2aa7d.jpg",
-    "static/media/djesse3.jpg": "/infinity/static/media/djesse3.62c7a9a0.jpg"
+    "static/media/boba_white.png": "/infinity/static/media/boba_white.490ce916.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d9a80ca9.js",
-    "static/js/2.7d31a533.chunk.js",
-    "static/js/main.a0807913.chunk.js"
+    "static/js/2.08d04a99.chunk.js",
+    "static/js/main.6594d72e.chunk.js"
   ]
 }
