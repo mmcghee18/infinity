@@ -15,7 +15,7 @@ import {
 import useChartDimensions from "../../hooks/useChartDimensions.js";
 import _ from "lodash";
 
-const SameSizeSet = ({ myStep }) => {
+const SameSizeSet = () => {
   const items = [bobaBrown, bobaGreen, bobaOrange, bobaPurple, bobaWhite];
 
   const chartSettings = {};
@@ -37,56 +37,27 @@ const SameSizeSet = ({ myStep }) => {
       </SetContainer>
 
       {/* Counting lines */}
-      {myStep > 0 && (
-        <div ref={ref} style={{ height: "200px", width: "100%" }}>
-          <svg height={dms.height} width={dms.width}>
-            <g>
-              <line
-                x1={firstX}
-                y1={0}
-                x2={firstX}
-                y2={200}
-                stroke="black"
-              ></line>
-            </g>
-          </svg>
-        </div>
-      )}
-
-      {/* {myStep > 0 && (
-        <SetContainer>
-          <CurlyBrace style={{ visibility: "hidden" }}>{"{"}</CurlyBrace>
-          {_.range(1, 6).map((i) => (
-            <div
-              key={i}
-              style={{
-                width: "18%",
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <Line key={i} />
-            </div>
-          ))}
-          <CurlyBrace style={{ visibility: "hidden" }}>{"}"}</CurlyBrace>
-        </SetContainer>
-      )} */}
+      <div ref={ref} style={{ height: "200px", width: "100%" }}>
+        <svg height={dms.height} width={dms.width}>
+          <g>
+            <line x1={firstX} y1={0} x2={firstX} y2={200} stroke="black"></line>
+          </g>
+        </svg>
+      </div>
 
       {/* Set of numbers */}
-      {myStep > 0 && (
-        <SetContainer>
-          <CurlyBrace>{"{"}</CurlyBrace>
-          {_.range(1, 6).map((i) => (
-            <div
-              key={i}
-              style={{ width: "18%", fontSize: "60px", textAlign: "center" }}
-            >
-              {i}
-            </div>
-          ))}
-          <CurlyBrace>{"}"}</CurlyBrace>
-        </SetContainer>
-      )}
+      <SetContainer>
+        <CurlyBrace>{"{"}</CurlyBrace>
+        {_.range(1, 6).map((i) => (
+          <div
+            key={i}
+            style={{ width: "18%", fontSize: "60px", textAlign: "center" }}
+          >
+            {i}
+          </div>
+        ))}
+        <CurlyBrace>{"}"}</CurlyBrace>
+      </SetContainer>
     </div>
   );
 };

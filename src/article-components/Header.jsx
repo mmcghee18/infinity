@@ -1,5 +1,5 @@
 import React from "react";
-import { FullPageContainer, WhiteText } from "../styles/styles.js";
+import { FullPageContainer } from "../styles/styles.js";
 import { useSpring, animated } from "react-spring";
 import useKeyPress from "../hooks/useKeyPress.js";
 
@@ -50,16 +50,16 @@ const NumberLines = () => {
   );
 };
 
-const Header = ({ visible, currentStep, setCurrentStep }) => {
+const Header = () => {
   return (
-    <FullPageContainer visible={visible}>
+    <FullPageContainer>
       <div>
         <h1>Counting Infinity</h1>
         <p>
-          Infinity. It's not a number, but rather the idea of something that is
-          boundless, endless, larger than any number. Like the number of digits
-          of pi. Or the number of breadsticks you can order at Olive Garden (not
-          really).
+          ~Infinity~ It's not a number, it's more of an idea. The idea of
+          something that is boundless, endless, larger than any number. Like the
+          number of digits of pi. Or the number of breadsticks you can order at
+          Olive Garden (not really).
         </p>
         <p>
           We’re going to ask the question “are some infinities bigger than other
@@ -70,12 +70,7 @@ const Header = ({ visible, currentStep, setCurrentStep }) => {
           go!)
         </p>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <p style={{ marginRight: "20px" }}>
-            <WhiteText>
-              Let's dive in! Click anywhere on the right side of the screen to
-              go forward (left side to go backwards).
-            </WhiteText>
-          </p>
+          <p style={{ marginRight: "20px" }}>Let's dive in!</p>
         </div>
       </div>
     </FullPageContainer>

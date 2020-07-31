@@ -3,19 +3,34 @@ import styled, { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
   body {
     font-family: Rubik, sans-serif;
-    background-color: #81a5c9;
+    background-color: #b7e1ed;
     color: #333333;
   }
 `;
 
 export const FullPageContainer = styled.div`
-  display: ${(props) => (props.visible ? "flex" : "none")};
   height: 92vh;
   flex-direction: column;
   align-items: center;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 70px;
+  padding-right: 70px;
   padding-top: 8vh;
+`;
+
+export const ScrollamaWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+`;
+
+export const ContentWrapper = styled.div`
+  position: sticky;
+  top: 100px;
+`;
+
+export const StepWrapper = styled.div`
+  margin: 25vh 0;
+  width: 250px;
 `;
 
 export const KeyboardKey = styled.span`

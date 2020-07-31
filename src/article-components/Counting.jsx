@@ -43,19 +43,8 @@ const textSteps = [
   <WhiteText>But these ones aren't. Someone's missing a buddy!</WhiteText>,
 ];
 
-const Counting = ({ visible, startStep, currentStep, setCurrentStep }) => {
-  const myStep = currentStep - startStep;
-  console.log({ myStep });
-
-  return (
-    <FullPageContainer visible={visible}>
-      <ExplainerText>
-        {textSteps.map((text, i) => myStep === i && text)}
-      </ExplainerText>
-      {myStep <= 3 && <SameSizeSet myStep={myStep} />}
-      {myStep > 3 && <DifferentSizeSet myStep={myStep} />}
-    </FullPageContainer>
-  );
+const Counting = () => {
+  return <></>;
 };
 
 export default Counting;
