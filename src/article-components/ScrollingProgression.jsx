@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { Scrollama, Step } from "react-scrollama";
 import {
+  Wrapper,
   ScrollamaWrapper,
   ContentWrapper,
   StepWrapper,
 } from "../styles/styles.js";
+import { useSpring } from "react-spring";
 import _ from "lodash";
 import textSteps from "./textSteps.js";
-import SameSizeSet from "./Counting/SameSizeSet.jsx";
 
-const ScrollingProgression = () => {
+const ScrollingProgression = ({ showHeader }) => {
+  const [props, set, stop] = useSpring(() => ({ opacity: 0 }));
+  set({ opacity: showHeader ? 0 : 1 });
+
   const [currentStep, setCurrentStep] = useState(null);
 
   const onStepEnter = ({ data }) => {
@@ -17,7 +21,7 @@ const ScrollingProgression = () => {
   };
 
   return (
-    <div style={{ display: "flex" }}>
+    <Wrapper showHeader={showHeader}>
       <ScrollamaWrapper>
         <Scrollama onStepEnter={onStepEnter}>
           {textSteps.map((content, i) => (
@@ -30,10 +34,10 @@ const ScrollingProgression = () => {
 
       <div>
         <ContentWrapper>
-          <SameSizeSet />
+          <p>I am sticky</p>
         </ContentWrapper>
       </div>
-    </div>
+    </Wrapper>
   );
 };
 

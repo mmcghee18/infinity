@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./article-components/Header.jsx";
 import ScrollingProgression from "./article-components/ScrollingProgression.jsx";
 
 function App() {
+  const [showHeader, setShowHeader] = useState(true);
+
   return (
     <div className="App">
-      <Header />
-      <ScrollingProgression />
+      <Header showHeader={showHeader} setShowHeader={setShowHeader} />
+      <ScrollingProgression showHeader={showHeader} />
     </div>
   );
 }
